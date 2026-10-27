@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Marks Manager</h1>
+        <p>Manage student marks and results</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Summary Cards -->
+        <section class="summary">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Passed</h3>
+                <p id="passedStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Failed</h3>
+                <p id="failedStudents">0</p>
+            </div>
+        </section>
+
+        <!-- Student Form -->
+        <section class="form-section">
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+
+                <label for="obtainedMarks">Obtained Marks (0-100)</label>
+                <input type="number" id="obtainedMarks" placeholder="Enter marks" min="0" max="100" step="1">
+
+                <p id="errorMessage" role="alert"></p>
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <!-- Results Table -->
+        <section class="results-section">
+            <h2>Student Results</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Marks</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultsBody">
+                        <!-- JavaScript results will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Week 1 JavaScript Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
